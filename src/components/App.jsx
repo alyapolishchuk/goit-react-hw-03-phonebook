@@ -4,6 +4,7 @@ import Section from './Section/Section';
 import ContactList from './ContactList/ContactList';
 import Filter from './Filter/Filter';
 
+const contactKey = '';
 export class App extends Component {
   state = {
     contacts: [
@@ -13,7 +14,24 @@ export class App extends Component {
       { id: 'id-4', name: 'Annie Copeland', number: '227-91-26' },
     ],
     filter: '',
+    name: '',
+    number: '',
   };
+
+  componentDidMount() {
+    if (localStorage.getItem(contactKey)) {
+      const localContactsList = JSON.parse(localStorage.getItem(contactKey));
+      this.setState({ contacts: localContactsList });
+    }
+  }
+
+  componentDidUpdate(prevProp, prevState) {
+    const { contacts } = this.state;
+
+    if (prevState.contacts.length !== contacts.length) {
+      localStorage.setItem(contactKey, JSON.stringify(contacts));
+    }
+  }
 
   addUserData = contact => {
     const { contacts } = this.state;

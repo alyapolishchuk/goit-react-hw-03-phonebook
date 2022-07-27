@@ -8,7 +8,7 @@ export default function Filter({ filter, handlerFilter }) {
       <input
         className={css.input}
         type="text"
-        name="filter"
+        name="name"
         value={filter}
         onChange={handlerFilter}
       />
