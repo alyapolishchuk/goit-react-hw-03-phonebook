@@ -15,6 +15,7 @@
   height: 25px;
   font-size: 20px;
   border: 2px solid rgba(137, 43, 226, 0.43);
+  border-radius: 8px;
 }
 .input2 {
   margin-left: 15px;
@@ -22,6 +23,7 @@
   height: 25px;
   font-size: 20px;
   border: 2px solid rgba(137, 43, 226, 0.43);
+  border-radius: 8px;
 }
 .input1:focus,
 .input2:focus {

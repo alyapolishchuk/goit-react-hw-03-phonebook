@@ -4,4 +4,5 @@
     padding: 30px;
     border: 2px dashed rgba(137, 43, 226, 0.471);
     background-color: rgba(137, 43, 226, 0.154);
+    border-radius: 10px;
 }
